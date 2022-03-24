@@ -14,6 +14,8 @@
     --negro: #000000;
 }
 
+/* ---------- BODY --------- */
+
 body {
     font-family: var(--fuentePrincipal);
     font-size: 12px;
@@ -21,13 +23,15 @@ body {
     margin-top: 150px;
 }
 
+/* ---------- HEADER ----------  */
+
 .main-header {
     background-color: var(--amarillo);
     padding: 20px;
     position: fixed;
     width: 100%;
     height: 150px;
-    top: 0;
+    top: 0;    
 }
 
 .main-header-top-bar {
@@ -50,6 +54,11 @@ body {
     height: 20px;
     position: relative;
     top: 10px;
+}
+
+.lupa {
+    position: absolute;
+    right: 5px;
 }
 
 .burger-button {
@@ -87,6 +96,8 @@ body {
     padding: 5px 0;
     font-size: 12px;
 }
+
+/* ---------- CONTENIDO MAIN ----------  */
 
 main {
     width: 90%;
@@ -171,6 +182,8 @@ h2 {
     visibility: hidden;
 }
 
+/* ---------- FOOTER ---------- */
+
 footer {
     text-align: center;
     padding-top: 10px;    
@@ -189,6 +202,12 @@ footer {
     border: dotted 1px red;
     font-size: 60px;
 }
+
+.copyright {
+    text-align: center;
+}
+
+/* ---------- FORMULARIOS ----------  */
 
 .formulario {
     background-color: lightgray;
@@ -223,11 +242,18 @@ footer {
     display: block;
 }
 
+.usuario {
+    position: absolute;
+    top: 390px;
+}
+
+.pass {
+    position: absolute;
+    top: 455px;
+}
+
 .error-login {
-    color: red;
-    position: relative;
-    top: 5px;
-    left: 520px;
+    visibility: hidden;
 }
 
 .imput-text {
@@ -274,18 +300,7 @@ footer {
     color: var(--negro);
 }
 
-@media (min-width: 361px) {
-    .nvar-header {
-        display: none;
-    }   
-    .search-navbar {
-        display: inline-block;
-        align-items: center;
-    }   
-    .copyright {
-        text-align: center;
-    }      
-}
+/* ---------- MEDIAS QUERY ----------  */
 
 @media (min-width: 480px) {
     body {
@@ -307,7 +322,7 @@ footer {
     }    
     .copyright {
         text-align: center;
-    }
+    }  
 }
 
 @media (min-width: 768px) {
@@ -317,19 +332,29 @@ footer {
     .main-header {
         height: 125px;
     }
-    .main-header-top-bar {        
+    .main-header-top-bar,
+    .main-navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        max-width: 1000px;        
+        margin: auto;
     }
     .input-navbar {
         position: relative;
         top: 0px;
-        left: 10px;
+        left: 0px;
     }
+    .lupa {
+        position: absolute;
+        right: 320px;
+        top: 2px;
+    }  
     .copy-header {
-        max-width: 25%;
-        text-align: right;           
+        margin: 0;
+        max-width: none;
+        font-size: 14px;
+        font-weight: 500;
     }
     .burger-button {
         display: none;
@@ -354,6 +379,13 @@ footer {
     .copyright {
         text-align: center;
     } 
+    .error-login {
+        visibility: visible;
+        color: red;
+        position: relative;
+        top: 5px;
+        left: 450px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -369,19 +401,25 @@ footer {
     }
     .input-navbar {
         position: relative;
-        top: 0px;
+        top: -7px;
     }  
-    .main-navbar li {
-        margin: 10 5px;
-    }
-    .main-navbar a {
-        font-size: 14px;
+    .lupa {
+        position: absolute;
+        right: 370px;
     }
     .copy-header {
         margin: 0;
         max-width: none;
         font-size: 16px;
         font-weight: 500;
+        position: relative;
+        top: -7px;
+    }
+    .main-navbar li {
+        margin: 10 5px;
+    }
+    .main-navbar a {
+        font-size: 14px;
     }
     .cuatro-imagenes {
         display: flex;
@@ -391,13 +429,19 @@ footer {
     footer {
         display: flex;
         justify-content: space-between;
-        max-width: 1200px;
+        max-width: 100%;
         margin-left: 10px;
         margin-top: 20px;;
-    } 
+    }     
     .copyright {
         text-align: center;
     } 
+    .error-login {
+        color: red;
+        position: relative;
+        top: 5px;
+        left: 520px;
+    }
 }
 
 
