@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/3a84dfeae6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg" class="logo"></a>
+            <input class="input-navbar" type="search" name="busqueda" placeholder="Buscar productos, Marcas">
+            <!-- <p class="lupa-buscar"><button><i class="fa-solid fa-magnifying-glass"></i></button></p> -->
+            <h2 class="copy-header"> <i class="fa fa-solid fa-hand-holding-dollar"> </i>
+                Comprá en cuotas y sin tarjeta de Crédito
+            </h2>
+        </div>
+        <a href="#" class="burger-button">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav class="main-navbar">
+            <ul class="left-nav-bar">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-nav-bar">
+                <li><a href="/registro">Crea tu Cuenta</a> <i class="fa fa-solid fa-address-card"></i> </li>
+                <li><a href="/login">Ingresa</a> <i class="fas fa-sign-in-alt"></i> </li>
+                <li><a href="#">Mis Compras</a> <i class=" fa fa-solid fa-basket-shopping"> </i> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img width="100%" src="/images/img-home-banner.jpg">
+    </section>
+
+    <main>
+        <section>
+            <form class="formulario">
+                <fieldset>
+                    <legend class="legendA">Logeate para Ingresar con tu Cuenta</legend>
+
+                    <div class="contenedor-campos">
+
+                        <div class="campo">
+                            <label>Nombre de Usuario</label>
+                            <input class="imput-text" type="text" name="usuario"
+                                placeholder="escribe aqui tu nombre de usuari@">
+                        </div>
+
+                        <div class="campo">
+                            <label>Contraseña</label>
+                            <input class="imput-text" type="password" name="password"
+                                placeholder="escribe aqui tu password" placeholder="escribe aqui tu domicilio">
+                        </div>
+                    </div><!-- contenedor de los campos -->
+
+                    <div class="boton-container">
+                        <a class="boton" href="/">Ingresar</a>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
